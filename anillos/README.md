@@ -8,20 +8,29 @@ dependencias, sin servidor—, así que se publica copiando los archivos.
 ## Lo primero: poner tus fotos
 
 Los anillos que se ven ahora son **dibujos SVG**, no fotos: sirven de relleno
-mientras llegan las tuyas. Para cambiarlos:
+mientras llegan las tuyas. Para cambiarlos **no hay que tocar código**:
 
-1. Guarda cada foto en `imagenes/`, nombrada como el id de la pieza
-   (`aro-cielo.jpg`, `esp-rubi.jpg`, …). Cuadradas y de 900 × 900 px.
-2. En `guion.js`, agrégale a esa pieza el campo `foto`:
+1. Guarda cada foto en `imagenes/`, nombrada como el id de la pieza:
+   `aro-azul.jpg`, `esp-rubi.jpg`, `got-verde.jpg`, …
+2. Recarga la página. Ya está.
+
+Los ids están en `guion.js`, en el campo `id` de cada pieza. Sirven `.jpg`,
+`.png`, `.webp` y `.jpeg`; cuadradas y de unos 900 × 900 px se ven bien en
+todo el sitio.
+
+Cada pieza que tenga foto usa la foto; las que no, se quedan con el dibujo,
+así que puedes ir fotografiando de a poco sin que el sitio se rompa.
+
+Si prefieres otro nombre de archivo, agrégale a la pieza el campo `foto`:
 
 ```js
-{ id:'aro-cielo', nombre:'Aro Cielo', familia:'aros', precio:780,
-  foto:'imagenes/aro-cielo.jpg',
-  cristal:'#5fa8d8', acento:'#bfe4fb', medidas:['5','6','7','8'], ... }
+{ id:'aro-azul', nombre:'Aro Cielo', familia:'aros', precio:780,
+  foto:'imagenes/lo-que-tu-quieras.jpg', ... }
 ```
 
-Cada pieza que tenga `foto` usa la foto; las que no, siguen con el dibujo. Se
-pueden ir cambiando de a poco.
+> El navegador recuerda durante la visita qué piezas tienen foto, para no
+> preguntar dos veces por lo mismo. Si agregas una foto nueva y no aparece,
+> cierra la pestaña y vuelve a abrirla.
 
 ## Archivos
 

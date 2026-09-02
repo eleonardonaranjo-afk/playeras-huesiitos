@@ -541,6 +541,11 @@ p{margin:0 0 1em}
 .desplegables details[open] summary::after{transform:rotate(-135deg) translateY(-3px)}
 .desplegables__cuerpo{padding:0 2px 24px;color:var(--tinta-suave);max-width:70ch}
 
+/* El envoltorio que cambia el dibujo por la foto no debe estorbar al
+   acomodo: display:contents lo saca del layout y deja al svg o al img
+   como hijo directo de su contenedor. */
+.lienzo{display:contents}
+
 /* ============ 6. CATALOGO Y TARJETAS ============ */
 .encabezado-cat{
   max-width:var(--ancho);

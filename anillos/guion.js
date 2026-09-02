@@ -338,14 +338,60 @@ function ilustracion(anillo, clase) {
   '</svg>';
 }
 
-/* Lo que se ve de cada pieza: la foto si ya la tienes, y si no, el dibujo.
-   Para usar tus fotos, agregale a la pieza en el CATALOGO:
-       foto:'imagenes/aro-cielo.jpg'
-   Cuadradas y de 900 px por lado se ven bien en todos lados. */
+/* Lo que se ve de cada pieza.
+   No hace falta tocar el codigo para poner tus fotos: guarda el archivo en
+   imagenes/ con el mismo id de la pieza (imagenes/aro-cielo.jpg) y el sitio
+   la encuentra solo. Sirven .jpg, .jpeg, .png y .webp; cuadradas y de unos
+   900 px por lado se ven bien en todos lados.
+
+   Mientras una pieza no tenga foto se queda el dibujo, asi que puedes ir
+   fotografiando de a poco sin que el sitio se rompa. */
+var EXTENSIONES = ['jpg', 'jpeg', 'png', 'webp'];
+
+function rutasPosibles(anillo) {
+  if (anillo.foto) return [anillo.foto];
+  return EXTENSIONES.map(function (ext) { return 'imagenes/' + anillo.id + '.' + ext; });
+}
+
+/* Se pinta el dibujo de inmediato; si la foto existe, entra en su lugar.
+   Asi nunca se ve el hueco de una imagen rota mientras carga. */
 function dibujo(anillo, clase) {
-  if (!anillo.foto) return ilustracion(anillo, clase);
-  return '<img class="' + (clase || '') + '" src="' + escapar(anillo.foto) +
-    '" alt="Anillo ' + escapar(anillo.nombre) + '" loading="lazy" width="900" height="900">';
+  return '<span class="lienzo" data-foto-de="' + anillo.id + '" data-clase="' + (clase || '') + '">' +
+    ilustracion(anillo, clase) + '</span>';
+}
+
+/* Que pieza tiene foto y cual no. Se guarda mientras dure la visita para no
+   volver a preguntar por lo mismo en cada pagina. Si agregas una foto nueva
+   y no aparece, recarga con la pestana cerrada y abierta de nuevo. */
+var LLAVE_FOTOS = 'soplo:fotos';
+var FOTOS = {};
+try { FOTOS = JSON.parse(sessionStorage.getItem(LLAVE_FOTOS) || '{}'); } catch (e) { FOTOS = {}; }
+
+function recordarFoto(id, valor) {
+  FOTOS[id] = valor;
+  try { sessionStorage.setItem(LLAVE_FOTOS, JSON.stringify(FOTOS)); } catch (e) { /* modo privado */ }
+}
+
+function buscarFotos(raiz) {
+  function poner(hueco, anillo, ruta) {
+    hueco.innerHTML = '<img class="' + (hueco.getAttribute('data-clase') || '') + '" src="' +
+      escapar(ruta) + '" alt="Anillo ' + escapar(anillo.nombre) + '" loading="lazy">';
+  }
+
+  $$('.lienzo[data-foto-de]', raiz).forEach(function (hueco) {
+    var id = hueco.getAttribute('data-foto-de');
+    var anillo = porId(id);
+    if (!anillo || FOTOS[id] === false) return;
+    if (FOTOS[id]) { poner(hueco, anillo, FOTOS[id]); return; }
+
+    (function probar(rutas, i) {
+      if (i >= rutas.length) { recordarFoto(id, false); return; }
+      var prueba = new Image();
+      prueba.onload  = function () { recordarFoto(id, rutas[i]); poner(hueco, anillo, rutas[i]); };
+      prueba.onerror = function () { probar(rutas, i + 1); };
+      prueba.src = rutas[i];
+    })(rutasPosibles(anillo), 0);
+  });
 }
 
 /* ============ 4. AYUDANTES ============ */
@@ -412,6 +458,7 @@ function pintarRejilla(rejilla, familiaForzada) {
     ? piezas.map(tarjeta).join('')
     : '<p class="rejilla__vacio">Por ahora no hay piezas en esta familia. ' +
       'Escribenos y te avisamos cuando salga la siguiente hornada.</p>';
+  buscarFotos(rejilla);
   return piezas.length;
 }
 
@@ -563,6 +610,8 @@ function iniciarFicha() {
     abrirBolsa();
   });
 
+  buscarFotos(ficha);
+
   var relacionados = $('#rejilla-relacionados');
   if (relacionados) {
     relacionados.setAttribute('data-familia', a.familia);
@@ -611,7 +660,7 @@ function iniciarBuscador() {
         '&raquo;. Prueba con aros, espirales, gotas, racimos, flores o apilables.</p>';
   }
 
-  campo.addEventListener('input', buscar);
+  campo.addEventListener('input', function () { buscar(); buscarFotos(salida); });
   campo.addEventListener('search', buscar);
   $('form', caja).addEventListener('submit', function (e) { e.preventDefault(); buscar(); });
 }
@@ -718,6 +767,7 @@ function pintarBolsa() {
         '</div>';
       }).join('')
     : '<p class="bolsa__vacia">Tu bolsa esta vacia.</p>';
+  buscarFotos(lista);
 
   var total = totalBolsa();
   var elTotal = $('#bolsa-total');
@@ -833,6 +883,7 @@ function pintarHuecos() {
     var a = porId(el.getAttribute('data-pieza'));
     if (a) el.insertAdjacentHTML('afterbegin', dibujo(a));
   });
+  buscarFotos(document);
 }
 
 /* Los formularios no tienen servidor: confirmamos en pantalla. */

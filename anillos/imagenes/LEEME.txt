@@ -1,10 +1,14 @@
 Aqui van tus fotos de los anillos.
 
-Nombra cada archivo como el id de la pieza en guion.js, por ejemplo:
-  aro-cielo.jpg, esp-rubi.jpg, got-verde.jpg
+No hay que tocar codigo: basta con que el archivo se llame como el id de la
+pieza, que esta en guion.js. Por ejemplo:
 
-Luego, en guion.js, agregale a esa pieza el campo foto:
-  { id:'aro-cielo', ..., foto:'imagenes/aro-cielo.jpg' }
+  aro-azul.jpg      ->  Aro Cielo
+  esp-rubi.jpg      ->  Espiral Rubi
+  got-verde.jpg     ->  Gotas de Musgo
 
-Cuadradas y de 900 x 900 pixeles se ven bien en todo el sitio.
-Mientras una pieza no tenga foto, el sitio dibuja el anillo en SVG.
+Sirven .jpg, .png, .webp y .jpeg. Cuadradas y de unos 900 x 900 pixeles se
+ven bien en todo el sitio.
+
+Las piezas que todavia no tengan foto se quedan con el dibujo, asi que
+puedes ir subiendo de a poco.
