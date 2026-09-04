@@ -1,0 +1,8 @@
+Aquí van las fotos de las playeras.
+
+1. Guarda la foto en esta carpeta, por ejemplo: catrina.jpg
+2. Abre script.js, busca el producto y escribe el nombre del archivo:
+      imagen:'catrina.jpg'
+3. Listo. Si el campo "imagen" va vacío se dibuja la playera ilustrada.
+
+Recomendado: foto vertical, 900 x 1200 px, fondo claro y parejo.
