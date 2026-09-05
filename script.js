@@ -85,6 +85,22 @@ var PRODUCTOS = [
    imagenes:['calaveras-calle.jpg','calaveras-calle-modelo.jpg','calaveras-calle-detalle.jpg'],
    texto:'Cuatro calaveras enmascaradas cruzando el paso de peatones, cada una con su máscara de color. Abajo del taller pasa igual todos los días.'},
 
+  {id:'calavera-neon',    nombre:'Calavera México Lindo', coleccion:'calaveras', secciones:['caballero'], tela:'#141414', tinta:'#f5a300', nuevo:true, destacado:true,
+   imagenes:['calavera-neon.jpg','calavera-neon-modelo.jpg','calavera-neon-modelo2.jpg','calavera-neon-detalle.jpg'],
+   texto:'Calavera en colores encendidos, como si le hubieran escurrido la pintura encima. Abajo, la firma: México lindo.'},
+
+  {id:'calavera-grecas',  nombre:'Calavera de Grecas',   coleccion:'calaveras', secciones:['caballero'], tela:'#141414', tinta:'#dfe4ea', nuevo:true, destacado:true,
+   imagenes:['calavera-grecas.jpg','calavera-grecas-modelo.jpg','calavera-grecas-doblada.jpg','calavera-grecas-detalle.jpg'],
+   texto:'Calavera armada entera con grecas y rombos en blanco. De lejos es una calavera; de cerca es puro dibujo geométrico.'},
+
+  {id:'calavera-bordada', nombre:'Calavera Bordada',     coleccion:'calaveras', secciones:['caballero'], tela:'#141414', tinta:'#e6007e', nuevo:true, destacado:false,
+   imagenes:['calavera-bordada.jpg','calavera-bordada-modelo.jpg','calavera-bordada-modelo2.jpg','calavera-bordada-detalle.jpg'],
+   texto:'Calavera de azúcar con relleno de flores en azul, rosa y naranja. El acercamiento deja ver el hilo del bordado.'},
+
+  {id:'ajolote-pedreria-cab', nombre:'Ajolote de Pedrería', coleccion:'ajolotes', secciones:['caballero'], tela:'#141414', tinta:'#dfe4ea', nuevo:false, destacado:false,
+   imagenes:['ajolote-pedreria-cab.jpg','ajolote-pedreria-cab-modelo.jpg','ajolote-pedreria-cab-detalle.jpg','ajolote-pedreria-cab-2.jpg'],
+   texto:'El ajolote de pedrería plateada, en corte de caballero. Cientos de piedritas puestas una por una sobre el algodón.'},
+
   /* ================= PIEZAS ILUSTRADAS =================
      Todavía sin foto: se dibujan solas. Cuando tengas la foto,
      agrégala a assets/productos/ y ponla aquí en "imagenes".      */
