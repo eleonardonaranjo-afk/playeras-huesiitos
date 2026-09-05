@@ -93,9 +93,9 @@ var PRODUCTOS = [
    imagenes:['calavera-grecas.jpg','calavera-grecas-modelo.jpg','calavera-grecas-doblada.jpg','calavera-grecas-detalle.jpg'],
    texto:'Calavera armada entera con grecas y rombos en blanco. De lejos es una calavera; de cerca es puro dibujo geométrico.'},
 
-  {id:'calavera-bordada', nombre:'Calavera Bordada',     coleccion:'calaveras', secciones:['caballero'], tela:'#141414', tinta:'#e6007e', nuevo:true, destacado:false,
-   imagenes:['calavera-bordada.jpg','calavera-bordada-modelo.jpg','calavera-bordada-modelo2.jpg','calavera-bordada-detalle.jpg'],
-   texto:'Calavera de azúcar con relleno de flores en azul, rosa y naranja. El acercamiento deja ver el hilo del bordado.'},
+  {id:'calavera-popotillo', nombre:'Calavera Popotillo',  coleccion:'calaveras', secciones:['caballero'], tela:'#141414', tinta:'#e6007e', nuevo:true, destacado:false,
+   imagenes:['calavera-popotillo.jpg','calavera-popotillo-modelo.jpg','calavera-popotillo-modelo2.jpg','calavera-popotillo-detalle.jpg'],
+   texto:'Es una simulación de una calavera de popotillo. Todo el diseño está hecho en serigrafía.'},
 
   {id:'ajolote-pedreria-cab', nombre:'Ajolote de Pedrería', coleccion:'ajolotes', secciones:['caballero'], tela:'#141414', tinta:'#dfe4ea', nuevo:false, destacado:false,
    imagenes:['ajolote-pedreria-cab.jpg','ajolote-pedreria-cab-modelo.jpg','ajolote-pedreria-cab-detalle.jpg','ajolote-pedreria-cab-2.jpg'],
