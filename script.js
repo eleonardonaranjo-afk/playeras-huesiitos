@@ -76,6 +76,15 @@ var PRODUCTOS = [
    imagenes:['calavera-florida.jpg'],
    texto:'Calavera cubierta de flores azules y rojas, con un pájaro posado en la frente.'},
 
+  /* ================= CABALLERO · PIEZAS CON FOTO REAL ================= */
+  {id:'mascara-luchador', nombre:'Máscara de Luchador', coleccion:'mascaras',  secciones:['caballero'], tela:'#141414', tinta:'#dfe4ea', nuevo:true, destacado:true,
+   imagenes:['mascara-luchador.jpg','mascara-luchador-modelo.jpg','mascara-luchador-detalle.jpg'],
+   texto:'Máscara de luchador en rojo y plata, con grecas prehispánicas y una calavera en la frente. La pieza más brava del taller.'},
+
+  {id:'calaveras-calle',  nombre:'Calaveras en la Calle', coleccion:'calaveras', secciones:['caballero'], tela:'#141414', tinta:'#e6007e', nuevo:true, destacado:true,
+   imagenes:['calaveras-calle.jpg','calaveras-calle-modelo.jpg','calaveras-calle-detalle.jpg'],
+   texto:'Cuatro calaveras enmascaradas cruzando el paso de peatones, cada una con su máscara de color. Abajo del taller pasa igual todos los días.'},
+
   /* ================= PIEZAS ILUSTRADAS =================
      Todavía sin foto: se dibujan solas. Cuando tengas la foto,
      agrégala a assets/productos/ y ponla aquí en "imagenes".      */
