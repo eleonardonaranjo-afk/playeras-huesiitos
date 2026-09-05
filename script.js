@@ -448,7 +448,6 @@ function iniciarFicha(){
         '<details open><summary>La pieza</summary>'+
           '<ul>'+
             '<li>Colección '+NOMBRE_COLECCION[p.coleccion]+'</li>'+
-            '<li>Pintada a mano, una por una: no hay dos idénticas</li>'+
             '<li>Algodón 100% peinado, cuello reforzado</li>'+
             '<li>Pintura textil fijada con calor, no se cuartea</li>'+
           '</ul>'+
