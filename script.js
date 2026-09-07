@@ -33,9 +33,10 @@ var NOMBRE_COLECCION = {
 /* ============ CATALOGO ============ */
 /* tela = color de la playera · tinta = color del estampado de serigrafía */
 var PRODUCTOS = [
-  /* ================= DAMA · PIEZAS CON FOTO REAL =================
-     Fotos en assets/productos/. La primera es la de catalogo y la
-     segunda la de modelo; ambas salen en la ficha del producto.     */
+  /* ================= DAMA =================
+     Fotos en assets/productos/. La primera es la de catálogo; las demás
+     salen también en la ficha del producto.                              */
+
   {id:'ajolote-alebrije', nombre:'Ajolote Alebrije',     coleccion:'ajolotes',  secciones:['dama'], tela:'#141414', tinta:'#31c0b8', nuevo:true,  destacado:true,
    imagenes:['ajolote-alebrije.jpg','ajolote-alebrije-modelo.jpg'],
    texto:'Un ajolote en clave alebrije: grecas, rombos y puntos de colores sobre negro, con las branquias abiertas como plumas.'},
@@ -56,9 +57,9 @@ var PRODUCTOS = [
    imagenes:['calavera-pedreria.jpg'],
    texto:'Calavera de azúcar resuelta en punteado rojo y azul que simula pedrería. Todo el estampado es serigrafía.'},
 
-  {id:'ajolote-pedreria', nombre:'Ajolote de Pedrería',  coleccion:'ajolotes',  secciones:['dama'], tela:'#141414', tinta:'#dfe4ea', nuevo:false, destacado:true,
-   imagenes:['ajolote-pedreria.jpg','ajolote-pedreria-modelo.jpg'],
-   texto:'El mismo ajolote, resuelto en punteado plateado que simula pedrería. De lejos parece piedra; de cerca es serigrafía.'},
+  {id:'ajolote-negro',    nombre:'Ajolote Negro',        coleccion:'ajolotes',  secciones:['dama'], tela:'#141414', tinta:'#dfe4ea', nuevo:false, destacado:true,
+   imagenes:['ajolote-negro.jpg','ajolote-negro-modelo.jpg'],
+   texto:'Ajolote en punteado plateado sobre negro. De lejos parece piedra; de cerca es serigrafía.'},
 
   {id:'muneca-lele',      nombre:'Muñeca Lele',          coleccion:'tradicion', secciones:['dama'], tela:'#141414', tinta:'#e6007e', nuevo:true,  destacado:false,
    imagenes:['muneca-lele.jpg','muneca-lele-modelo.jpg'],
@@ -76,7 +77,8 @@ var PRODUCTOS = [
    imagenes:['calavera-florida.jpg'],
    texto:'Calavera cubierta de flores azules y rojas, con un pájaro posado en la frente.'},
 
-  /* ================= CABALLERO · PIEZAS CON FOTO REAL ================= */
+  /* ================= CABALLERO ================= */
+
   {id:'mascara-luchador', nombre:'Máscara de Luchador', coleccion:'mascaras',  secciones:['caballero'], tela:'#141414', tinta:'#dfe4ea', nuevo:true, destacado:true,
    imagenes:['mascara-luchador.jpg','mascara-luchador-modelo.jpg','mascara-luchador-detalle.jpg'],
    texto:'Máscara de luchador en rojo y plata, con grecas prehispánicas y una calavera en la frente. La pieza más brava del taller.'},
@@ -97,9 +99,9 @@ var PRODUCTOS = [
    imagenes:['calavera-popotillo.jpg','calavera-popotillo-modelo.jpg','calavera-popotillo-modelo2.jpg','calavera-popotillo-detalle.jpg'],
    texto:'Es una simulación de una calavera de popotillo. Todo el diseño está hecho en serigrafía.'},
 
-  {id:'ajolote-pedreria-cab', nombre:'Ajolote de Pedrería', coleccion:'ajolotes', secciones:['caballero'], tela:'#141414', tinta:'#dfe4ea', nuevo:false, destacado:false,
-   imagenes:['ajolote-pedreria-cab.jpg','ajolote-pedreria-cab-modelo.jpg','ajolote-pedreria-cab-detalle.jpg','ajolote-pedreria-cab-2.jpg'],
-   texto:'El ajolote de punteado plateado que simula pedrería, en corte de caballero. Todo el estampado es serigrafía.'},
+  {id:'ajolote-negro-cab', nombre:'Ajolote Negro',        coleccion:'ajolotes', secciones:['caballero'], tela:'#141414', tinta:'#dfe4ea', nuevo:false, destacado:false,
+   imagenes:['ajolote-negro-cab.jpg','ajolote-negro-cab-modelo.jpg','ajolote-negro-cab-detalle.jpg','ajolote-negro-cab-2.jpg'],
+   texto:'Ajolote en punteado plateado sobre negro, en corte de caballero. Todo el estampado es serigrafía.'},
 
   {id:'calavera-huichol', nombre:'Calavera Huichol',     coleccion:'calaveras', secciones:['caballero'], tela:'#141414', tinta:'#31a8e0', nuevo:true, destacado:true,
    imagenes:['calavera-huichol.jpg','calavera-huichol-modelo.jpg','calavera-huichol-modelo2.jpg','calavera-huichol-detalle.jpg'],
@@ -110,7 +112,7 @@ var PRODUCTOS = [
    texto:'La máscara azul y blanca de las que se ven en la arena. Grande, al centro del pecho y sin más adornos.'},
 
   {id:'mascara-plata',    nombre:'Máscara de Plata',      coleccion:'mascaras',  secciones:['caballero'], tela:'#141414', tinta:'#dfe4ea', nuevo:true, destacado:true,
-   imagenes:['mascara-plata.jpg','mascara-plata-modelo.jpg','mascara-plata-modelo2.jpg','mascara-plata-detalle.jpg'],
+   imagenes:['mascara-plata-modelo2.jpg','mascara-plata-modelo.jpg','mascara-plata.jpg','mascara-plata-detalle.jpg'],
    texto:'La máscara del ídolo, en plata y oro sobre negro. El acercamiento deja ver el brillo del estampado.'},
 
   {id:'quetzalcoatl',     nombre:'Quetzalcóatl',          coleccion:'tradicion', secciones:['caballero'], tela:'#141414', tinta:'#2a9d5c', nuevo:true, destacado:true,
@@ -123,73 +125,7 @@ var PRODUCTOS = [
 
   {id:'ajolote-alebrije-cab', nombre:'Ajolote Alebrije',  coleccion:'ajolotes',  secciones:['caballero'], tela:'#141414', tinta:'#31c0b8', nuevo:false, destacado:false,
    imagenes:['ajolote-alebrije-cab.jpg','ajolote-alebrije-cab-modelo.jpg','ajolote-alebrije-cab-detalle.jpg'],
-   texto:'El ajolote en clave alebrije, en corte de caballero. Grecas, rombos y punteado de colores sobre negro.'},
-
-  /* ================= PIEZAS ILUSTRADAS =================
-     Todavía sin foto: se dibujan solas. Cuando tengas la foto,
-     agrégala a assets/productos/ y ponla aquí en "imagenes".      */
-  /* --- CALAVERAS --- */
-  {id:'catrina',        nombre:'Catrina de Flores',      coleccion:'calaveras', secciones:['caballero'], tela:'#141414', tinta:'#f3e7d6', imagen:'', nuevo:true,  destacado:true,
-   texto:'La Catrina rodeada de cempasúchil, estampada a varios colores sobre algodón peinado.'},
-  {id:'calaca-viva',    nombre:'Calaca Viva',            coleccion:'calaveras', secciones:['caballero'],        tela:'#1d2b3a', tinta:'#ffd166', imagen:'', nuevo:false, destacado:true,
-   texto:'Una calavera sonriente con ojos de flor, en tinta amarilla sobre azul noche.'},
-  {id:'dulce-muerte',   nombre:'Dulce Muerte',           coleccion:'calaveras', secciones:['caballero'],             tela:'#f4ece2', tinta:'#e6007e', imagen:'', nuevo:false, destacado:false,
-   texto:'Calavera de azúcar en rosa mexicano sobre tela color hueso. Nuestro diseño más pedido en bazar.'},
-  {id:'calaverita',     nombre:'Calaverita',             coleccion:'calaveras', secciones:['nino'],             tela:'#00a6a6', tinta:'#fff7ef', imagen:'', nuevo:true,  destacado:false,
-   texto:'La versión chiquita y traviesa de nuestra calavera, pensada para los más pequeños de la casa.'},
-  {id:'noche-de-muertos',nombre:'Noche de Muertos',      coleccion:'calaveras', secciones:['caballero'], tela:'#221436', tinta:'#f5a300', imagen:'', nuevo:false, destacado:false,
-   texto:'Procesión de calaveras con veladoras, inspirada en la ofrenda de casa de la abuela.'},
-  {id:'huesitos-clasica',nombre:'Huesitos Clásica',      coleccion:'calaveras', secciones:['caballero','nino'], tela:'#0e0e0e', tinta:'#ffffff', imagen:'', nuevo:false, destacado:true,
-   texto:'La primera playera que estampamos, y la que nos dio el nombre. Blanco sobre negro, sin adornos.'},
-
-  /* --- AJOLOTES --- */
-  {id:'ajolote-rosa',   nombre:'Ajolote Rosa',           coleccion:'ajolotes', secciones:['nino'],       tela:'#f4ece2', tinta:'#e6007e', imagen:'', nuevo:true,  destacado:true,
-   texto:'El ajolote de Xochimilco con sus branquias de plumas, en rosa mexicano sobre hueso.'},
-  {id:'ajolote-lunar',  nombre:'Ajolote Lunar',          coleccion:'ajolotes', secciones:['caballero'],         tela:'#122a3a', tinta:'#7fd8d8', imagen:'', nuevo:false, destacado:true,
-   texto:'Ajolote nadando entre lunas y chinampas, en turquesa sobre azul profundo.'},
-  {id:'ajolote-fuego',  nombre:'Ajolote de Fuego',       coleccion:'ajolotes', secciones:['caballero'],  tela:'#141414', tinta:'#f5a300', imagen:'', nuevo:false, destacado:false,
-   texto:'Ajolote naranja como brasa, con detalles de humo en el pecho de la prenda.'},
-  {id:'ajolotito',      nombre:'Ajolotito',              coleccion:'ajolotes', secciones:['nino'],              tela:'#2a9d5c', tinta:'#fff7ef', imagen:'', nuevo:false, destacado:false,
-   texto:'Un ajolote sonriente y regordete. Favorito absoluto de los niños en el bazar.'},
-  {id:'xochimilco',     nombre:'Xochimilco',             coleccion:'ajolotes', secciones:['nino'],              tela:'#6a4c93', tinta:'#ffe0f0', imagen:'', nuevo:true,  destacado:false,
-   texto:'Ajolote entre trajineras y flores, un homenaje a los canales que lo vieron nacer.'},
-
-  /* --- MASCARAS --- */
-
-  {id:'rudo-y-tecnico', nombre:'Rudo y Técnico',         coleccion:'mascaras', secciones:['caballero','dama'],  tela:'#8a1030', tinta:'#ffd166', imagen:'', nuevo:true,  destacado:true,
-   texto:'Dos máscaras frente a frente, la eterna rivalidad de la arena, en oro sobre guinda.'},
-  {id:'mascara-jaguar', nombre:'Máscara Jaguar',         coleccion:'mascaras', secciones:['caballero'],         tela:'#1f3d2b', tinta:'#f5a300', imagen:'', nuevo:false, destacado:false,
-   texto:'Máscara prehispánica de jaguar con grecas, en ocre sobre verde selva.'},
-  {id:'campeon',        nombre:'Campeón',                coleccion:'mascaras', secciones:['nino'],              tela:'#e6007e', tinta:'#fff7ef', imagen:'', nuevo:false, destacado:false,
-   texto:'Para el peque que se sube al ring de la sala. Máscara sencilla en blanco sobre rosa.'},
-  {id:'arena-mexico',   nombre:'Arena México',           coleccion:'mascaras', secciones:['caballero','dama'],  tela:'#f4ece2', tinta:'#141414', imagen:'', nuevo:false, destacado:false,
-   texto:'Máscara clásica en tinta negra sobre hueso. Sobria para el diario, brava para la lucha.'},
-
-  /* --- ALEBRIJES --- */
-  {id:'alebrije-cielo', nombre:'Alebrije del Cielo',     coleccion:'alebrijes', secciones:['caballero'], tela:'#141414', tinta:'#31c0b8', imagen:'', nuevo:true,  destacado:true,
-   texto:'Criatura alada con cuernos de espiral, en turquesa como las tallas de Oaxaca.'},
-  {id:'alebrije-solar', nombre:'Alebrije Solar',         coleccion:'alebrijes', secciones:['caballero'],        tela:'#1d2b3a', tinta:'#f5a300', imagen:'', nuevo:false, destacado:false,
-   texto:'Alebrije de fuego con alas abiertas, con el punteado fino que le da el brillo.'},
-  {id:'alebrije-noche', nombre:'Alebrije de Noche',      coleccion:'alebrijes', secciones:['dama'],             tela:'#221436', tinta:'#ff8ac4', imagen:'', nuevo:false, destacado:true,
-   texto:'Alebrije rosa sobre morado profundo, con la panza llena de estrellas.'},
-  {id:'alebrijito',     nombre:'Alebrijito',             coleccion:'alebrijes', secciones:['nino'],             tela:'#f5a300', tinta:'#141414', imagen:'', nuevo:true,  destacado:false,
-   texto:'Alebrije chiquito y curioso, en negro sobre amarillo. Para los que se lo van a manchar de helado.'},
-  {id:'guardian',       nombre:'Guardián',               coleccion:'alebrijes', secciones:['caballero'], tela:'#0f5132', tinta:'#ffe08a', imagen:'', nuevo:false, destacado:false,
-   texto:'El alebrije que cuida el sueño, con ojos grandes y cola de espiral.'},
-
-  /* --- TRADICION --- */
-  {id:'flor-otomi',     nombre:'Flor Otomí',             coleccion:'tradicion', secciones:['caballero'],             tela:'#f4ece2', tinta:'#e6007e', imagen:'', nuevo:true,  destacado:true,
-   texto:'Bordado otomí llevado a serigrafía: ocho pétalos, un centro y mucha paciencia.'},
-  {id:'sol-talavera',   nombre:'Sol de Talavera',        coleccion:'tradicion', secciones:['caballero'], tela:'#122a3a', tinta:'#dfe4ea', imagen:'', nuevo:false, destacado:false,
-   texto:'Sol de azulejo poblano en blanco sobre azul, con el trazo suelto de la talavera.'},
-  {id:'corazon-de-pueblo',nombre:'Corazón de Pueblo',    coleccion:'tradicion', secciones:['caballero'], tela:'#8a1030', tinta:'#ffd166', imagen:'', nuevo:false, destacado:true,
-   texto:'Flor grande al centro del pecho, del tamaño de un corazón, en oro sobre guinda.'},
-  {id:'maiz-nuestro',   nombre:'Maíz Nuestro',           coleccion:'tradicion', secciones:['caballero'],        tela:'#2a9d5c', tinta:'#fff7ef', imagen:'', nuevo:false, destacado:false,
-   texto:'Mazorca abierta en flor. Sin maíz no hay país, y sin país no hay playera.'},
-  {id:'flor-de-feria',  nombre:'Flor de Feria',          coleccion:'tradicion', secciones:['nino'],             tela:'#00a6a6', tinta:'#ffe08a', imagen:'', nuevo:false, destacado:false,
-   texto:'Flor de papel picado en amarillo, como las que cuelgan en la feria del pueblo.'},
-  {id:'cempasuchil',    nombre:'Cempasúchil',            coleccion:'tradicion', secciones:['nino'],      tela:'#141414', tinta:'#f5a300', imagen:'', nuevo:true,  destacado:false,
-   texto:'La flor que guía a los que vuelven, en naranja sobre negro.'}
+   texto:'El ajolote en clave alebrije, en corte de caballero. Grecas, rombos y punteado de colores sobre negro.'}
 ];
 
 /* ============ HERRAMIENTAS ============ */
