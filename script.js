@@ -31,7 +31,7 @@ var NOMBRE_COLECCION = {
 };
 
 /* ============ CATALOGO ============ */
-/* tela = color de la playera · tinta = color del dibujo pintado a mano */
+/* tela = color de la playera · tinta = color del estampado de serigrafía */
 var PRODUCTOS = [
   /* ================= DAMA · PIEZAS CON FOTO REAL =================
      Fotos en assets/productos/. La primera es la de catalogo y la
@@ -42,23 +42,23 @@ var PRODUCTOS = [
 
   {id:'catrina-sombrero', nombre:'Catrina de Sombrero',  coleccion:'calaveras', secciones:['dama'], tela:'#141414', tinta:'#f3e7d6', nuevo:true,  destacado:true,
    imagenes:['catrina-sombrero.jpg'],
-   texto:'La Catrina con su sombrero de flores y el vestido de encaje. Es la pieza que más tiempo nos lleva pintar.'},
+   texto:'La Catrina con su sombrero de flores y el vestido de encaje. Es la que más colores lleva de toda la colección.'},
 
   {id:'frida',            nombre:'Frida entre Flores',   coleccion:'tradicion', secciones:['dama'], tela:'#141414', tinta:'#e6007e', nuevo:true,  destacado:true,
    imagenes:['frida.jpg','frida-modelo.jpg'],
-   texto:'Frida con su corona de flores y el vestido hecho de bordado, en colores encendidos sobre negro.'},
+   texto:'Frida con su corona de flores y el vestido armado de flores, en colores encendidos sobre negro.'},
 
   {id:'chihuahua',        nombre:'Chihuahua de Muertos', coleccion:'calaveras', secciones:['dama'], tela:'#141414', tinta:'#ffd166', nuevo:false, destacado:true,
    imagenes:['chihuahua.jpg','chihuahua-modelo.jpg'],
-   texto:'Un chihuahueño vuelto calavera de azúcar, con flores en las orejas y el esqueleto pintado en blanco.'},
+   texto:'Un chihuahueño vuelto calavera de azúcar, con flores en las orejas y el esqueleto estampado en blanco.'},
 
   {id:'calavera-pedreria',nombre:'Calavera de Pedrería', coleccion:'calaveras', secciones:['dama'], tela:'#141414', tinta:'#e6007e', nuevo:false, destacado:true,
    imagenes:['calavera-pedreria.jpg'],
-   texto:'Calavera de azúcar armada con pedrería roja y azul, piedra por piedra. Brilla distinto según le pegue la luz.'},
+   texto:'Calavera de azúcar resuelta en punteado rojo y azul que simula pedrería. Todo el estampado es serigrafía.'},
 
   {id:'ajolote-pedreria', nombre:'Ajolote de Pedrería',  coleccion:'ajolotes',  secciones:['dama'], tela:'#141414', tinta:'#dfe4ea', nuevo:false, destacado:true,
    imagenes:['ajolote-pedreria.jpg','ajolote-pedreria-modelo.jpg'],
-   texto:'El mismo ajolote, trazado punto por punto en pedrería plateada. De lejos es un dibujo; de cerca son cientos de piedritas.'},
+   texto:'El mismo ajolote, resuelto en punteado plateado que simula pedrería. De lejos parece piedra; de cerca es serigrafía.'},
 
   {id:'muneca-lele',      nombre:'Muñeca Lele',          coleccion:'tradicion', secciones:['dama'], tela:'#141414', tinta:'#e6007e', nuevo:true,  destacado:false,
    imagenes:['muneca-lele.jpg','muneca-lele-modelo.jpg'],
@@ -70,7 +70,7 @@ var PRODUCTOS = [
 
   {id:'xolo',             nombre:'Xoloitzcuintle',       coleccion:'alebrijes', secciones:['dama'], tela:'#141414', tinta:'#31c0b8', nuevo:false, destacado:false,
    imagenes:['xolo.jpg','xolo-modelo.jpg'],
-   texto:'El xolo, el perro que acompaña a los muertos en su camino, dibujado con grecas en turquesa y naranja.'},
+   texto:'El xolo, el perro que acompaña a los muertos en su camino, resuelto con grecas en turquesa y naranja.'},
 
   {id:'calavera-florida', nombre:'Calavera Florida',     coleccion:'calaveras', secciones:['dama'], tela:'#141414', tinta:'#7fb2ff', nuevo:false, destacado:false,
    imagenes:['calavera-florida.jpg'],
@@ -87,7 +87,7 @@ var PRODUCTOS = [
 
   {id:'calavera-neon',    nombre:'Calavera México Lindo', coleccion:'calaveras', secciones:['caballero'], tela:'#141414', tinta:'#f5a300', nuevo:true, destacado:true,
    imagenes:['calavera-neon.jpg','calavera-neon-modelo.jpg','calavera-neon-modelo2.jpg','calavera-neon-detalle.jpg'],
-   texto:'Calavera en colores encendidos, como si le hubieran escurrido la pintura encima. Abajo, la firma: México lindo.'},
+   texto:'Calavera en colores encendidos, con los tonos escurriendo hacia abajo. Al pie, la firma: México lindo.'},
 
   {id:'calavera-grecas',  nombre:'Calavera de Grecas',   coleccion:'calaveras', secciones:['caballero'], tela:'#141414', tinta:'#dfe4ea', nuevo:true, destacado:true,
    imagenes:['calavera-grecas.jpg','calavera-grecas-modelo.jpg','calavera-grecas-doblada.jpg','calavera-grecas-detalle.jpg'],
@@ -99,14 +99,14 @@ var PRODUCTOS = [
 
   {id:'ajolote-pedreria-cab', nombre:'Ajolote de Pedrería', coleccion:'ajolotes', secciones:['caballero'], tela:'#141414', tinta:'#dfe4ea', nuevo:false, destacado:false,
    imagenes:['ajolote-pedreria-cab.jpg','ajolote-pedreria-cab-modelo.jpg','ajolote-pedreria-cab-detalle.jpg','ajolote-pedreria-cab-2.jpg'],
-   texto:'El ajolote de pedrería plateada, en corte de caballero. Cientos de piedritas puestas una por una sobre el algodón.'},
+   texto:'El ajolote de punteado plateado que simula pedrería, en corte de caballero. Todo el estampado es serigrafía.'},
 
   /* ================= PIEZAS ILUSTRADAS =================
      Todavía sin foto: se dibujan solas. Cuando tengas la foto,
      agrégala a assets/productos/ y ponla aquí en "imagenes".      */
   /* --- CALAVERAS --- */
   {id:'catrina',        nombre:'Catrina de Flores',      coleccion:'calaveras', secciones:['caballero'], tela:'#141414', tinta:'#f3e7d6', imagen:'', nuevo:true,  destacado:true,
-   texto:'La Catrina rodeada de cempasúchil, pintada trazo por trazo con pincel fino sobre algodón peinado.'},
+   texto:'La Catrina rodeada de cempasúchil, estampada a varios colores sobre algodón peinado.'},
   {id:'calaca-viva',    nombre:'Calaca Viva',            coleccion:'calaveras', secciones:['caballero'],        tela:'#1d2b3a', tinta:'#ffd166', imagen:'', nuevo:false, destacado:true,
    texto:'Una calavera sonriente con ojos de flor, en tinta amarilla sobre azul noche.'},
   {id:'dulce-muerte',   nombre:'Dulce Muerte',           coleccion:'calaveras', secciones:['caballero'],             tela:'#f4ece2', tinta:'#e6007e', imagen:'', nuevo:false, destacado:false,
@@ -116,13 +116,13 @@ var PRODUCTOS = [
   {id:'noche-de-muertos',nombre:'Noche de Muertos',      coleccion:'calaveras', secciones:['caballero'], tela:'#221436', tinta:'#f5a300', imagen:'', nuevo:false, destacado:false,
    texto:'Procesión de calaveras con veladoras, inspirada en la ofrenda de casa de la abuela.'},
   {id:'huesitos-clasica',nombre:'Huesitos Clásica',      coleccion:'calaveras', secciones:['caballero','nino'], tela:'#0e0e0e', tinta:'#ffffff', imagen:'', nuevo:false, destacado:true,
-   texto:'La primera playera que pintamos, y la que nos dio el nombre. Blanco sobre negro, sin adornos.'},
+   texto:'La primera playera que estampamos, y la que nos dio el nombre. Blanco sobre negro, sin adornos.'},
 
   /* --- AJOLOTES --- */
   {id:'ajolote-rosa',   nombre:'Ajolote Rosa',           coleccion:'ajolotes', secciones:['nino'],       tela:'#f4ece2', tinta:'#e6007e', imagen:'', nuevo:true,  destacado:true,
    texto:'El ajolote de Xochimilco con sus branquias de plumas, en rosa mexicano sobre hueso.'},
   {id:'ajolote-lunar',  nombre:'Ajolote Lunar',          coleccion:'ajolotes', secciones:['caballero'],         tela:'#122a3a', tinta:'#7fd8d8', imagen:'', nuevo:false, destacado:true,
-   texto:'Ajolote nadando entre lunas y chinampas, pintado en turquesa sobre azul profundo.'},
+   texto:'Ajolote nadando entre lunas y chinampas, en turquesa sobre azul profundo.'},
   {id:'ajolote-fuego',  nombre:'Ajolote de Fuego',       coleccion:'ajolotes', secciones:['caballero'],  tela:'#141414', tinta:'#f5a300', imagen:'', nuevo:false, destacado:false,
    texto:'Ajolote naranja como brasa, con detalles de humo en el pecho de la prenda.'},
   {id:'ajolotito',      nombre:'Ajolotito',              coleccion:'ajolotes', secciones:['nino'],              tela:'#2a9d5c', tinta:'#fff7ef', imagen:'', nuevo:false, destacado:false,
@@ -132,7 +132,7 @@ var PRODUCTOS = [
 
   /* --- MASCARAS --- */
   {id:'mascara-plata',  nombre:'Máscara de Plata',       coleccion:'mascaras', secciones:['caballero'],         tela:'#0e0e0e', tinta:'#dfe4ea', imagen:'', nuevo:false, destacado:true,
-   texto:'Máscara de luchador con estrella en la frente, pintada en plata mate sobre negro.'},
+   texto:'Máscara de luchador con estrella en la frente, en plata mate sobre negro.'},
   {id:'rudo-y-tecnico', nombre:'Rudo y Técnico',         coleccion:'mascaras', secciones:['caballero','dama'],  tela:'#8a1030', tinta:'#ffd166', imagen:'', nuevo:true,  destacado:true,
    texto:'Dos máscaras frente a frente, la eterna rivalidad de la arena, en oro sobre guinda.'},
   {id:'mascara-jaguar', nombre:'Máscara Jaguar',         coleccion:'mascaras', secciones:['caballero'],         tela:'#1f3d2b', tinta:'#f5a300', imagen:'', nuevo:false, destacado:false,
@@ -144,9 +144,9 @@ var PRODUCTOS = [
 
   /* --- ALEBRIJES --- */
   {id:'alebrije-cielo', nombre:'Alebrije del Cielo',     coleccion:'alebrijes', secciones:['caballero'], tela:'#141414', tinta:'#31c0b8', imagen:'', nuevo:true,  destacado:true,
-   texto:'Criatura alada con cuernos de espiral, pintada en turquesa como las tallas de Oaxaca.'},
+   texto:'Criatura alada con cuernos de espiral, en turquesa como las tallas de Oaxaca.'},
   {id:'alebrije-solar', nombre:'Alebrije Solar',         coleccion:'alebrijes', secciones:['caballero'],        tela:'#1d2b3a', tinta:'#f5a300', imagen:'', nuevo:false, destacado:false,
-   texto:'Alebrije de fuego con alas abiertas, con puntitos pintados uno por uno.'},
+   texto:'Alebrije de fuego con alas abiertas, con el punteado fino que le da el brillo.'},
   {id:'alebrije-noche', nombre:'Alebrije de Noche',      coleccion:'alebrijes', secciones:['dama'],             tela:'#221436', tinta:'#ff8ac4', imagen:'', nuevo:false, destacado:true,
    texto:'Alebrije rosa sobre morado profundo, con la panza llena de estrellas.'},
   {id:'alebrijito',     nombre:'Alebrijito',             coleccion:'alebrijes', secciones:['nino'],             tela:'#f5a300', tinta:'#141414', imagen:'', nuevo:true,  destacado:false,
@@ -156,7 +156,7 @@ var PRODUCTOS = [
 
   /* --- TRADICION --- */
   {id:'flor-otomi',     nombre:'Flor Otomí',             coleccion:'tradicion', secciones:['caballero'],             tela:'#f4ece2', tinta:'#e6007e', imagen:'', nuevo:true,  destacado:true,
-   texto:'Bordado otomí traducido a pincel: ocho pétalos, un centro y mucha paciencia.'},
+   texto:'Bordado otomí llevado a serigrafía: ocho pétalos, un centro y mucha paciencia.'},
   {id:'sol-talavera',   nombre:'Sol de Talavera',        coleccion:'tradicion', secciones:['caballero'], tela:'#122a3a', tinta:'#dfe4ea', imagen:'', nuevo:false, destacado:false,
    texto:'Sol de azulejo poblano en blanco sobre azul, con el trazo suelto de la talavera.'},
   {id:'corazon-de-pueblo',nombre:'Corazón de Pueblo',    coleccion:'tradicion', secciones:['caballero'], tela:'#8a1030', tinta:'#ffd166', imagen:'', nuevo:false, destacado:true,
@@ -166,7 +166,7 @@ var PRODUCTOS = [
   {id:'flor-de-feria',  nombre:'Flor de Feria',          coleccion:'tradicion', secciones:['nino'],             tela:'#00a6a6', tinta:'#ffe08a', imagen:'', nuevo:false, destacado:false,
    texto:'Flor de papel picado en amarillo, como las que cuelgan en la feria del pueblo.'},
   {id:'cempasuchil',    nombre:'Cempasúchil',            coleccion:'tradicion', secciones:['nino'],      tela:'#141414', tinta:'#f5a300', imagen:'', nuevo:true,  destacado:false,
-   texto:'La flor que guía a los que vuelven, pintada en naranja sobre negro.'}
+   texto:'La flor que guía a los que vuelven, en naranja sobre negro.'}
 ];
 
 /* ============ HERRAMIENTAS ============ */
@@ -465,12 +465,20 @@ function iniciarFicha(){
           '<ul>'+
             '<li>Colección '+NOMBRE_COLECCION[p.coleccion]+'</li>'+
             '<li>Algodón 100% peinado, cuello reforzado</li>'+
-            '<li>Pintura textil fijada con calor, no se cuartea</li>'+
+            '<li>Estampado en serigrafía, color por color</li>'+
+            '<li>Tinta textil curada con calor: no se cuartea ni se despinta</li>'+
           '</ul>'+
+        '</details>'+
+        '<details><summary>Cómo se imprime</summary>'+
+          '<p>Todo lo que ves en la playera es serigrafía: la tinta pasa a través de una malla '+
+          'tensada en un marco, y cada color lleva su propio marco y su propia pasada. Al final '+
+          'el estampado se cura con calor para que quede fijado en la tela.</p>'+
+          '<p>Algunos diseños imitan otras técnicas, como el popotillo, la pedrería o el bordado, '+
+          'pero todos van impresos en serigrafía.</p>'+
         '</details>'+
         '<details><summary>Cuidados</summary>'+
           '<p>Lava a mano o en ciclo delicado con agua fría, del revés. Nada de cloro ni secadora, '+
-          'y plancha por dentro. Así el dibujo aguanta años.</p>'+
+          'y plancha por dentro. Así el estampado aguanta años.</p>'+
         '</details>'+
         '<details><summary>Envíos y entregas</summary>'+
           '<p>Enviamos a todo México en 3 a 5 días hábiles. También puedes recogerla sin costo '+

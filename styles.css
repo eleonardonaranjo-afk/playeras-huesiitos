@@ -395,6 +395,21 @@ h1,h2,h3{margin:0; font-weight:400; letter-spacing:.02em}
 .argumento p{margin:0; color:var(--gris); font-size:15px}
 .argumento svg{width:38px; height:38px; color:var(--rosa)}
 
+/* --- pasos de la serigrafia --- */
+.pasos{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:26px;
+}
+.paso{padding-top:20px; border-top:2px solid var(--rosa)}
+.paso__num{
+  display:block; margin:0 0 12px;
+  font-family:var(--titulo); font-size:26px; line-height:1; color:var(--rosa);
+}
+.paso h3{
+  margin:0 0 8px;
+  font-size:13px; letter-spacing:.2em; text-transform:uppercase;
+}
+.paso p{margin:0; color:var(--gris); font-size:15px}
+
 /* --- nosotros --- */
 .nosotros{
   display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;
@@ -719,6 +734,7 @@ h1,h2,h3{margin:0; font-weight:400; letter-spacing:.02em}
 /* ============ RESPONSIVO ============ */
 @media (max-width:1200px){
   .rejilla{grid-template-columns:repeat(3,1fr)}
+  .pasos{grid-template-columns:repeat(2,1fr); gap:32px}
   .mosaico{grid-template-columns:repeat(2,1fr)}
   .argumentos{grid-template-columns:repeat(2,1fr); gap:38px}
   .pie__columnas{grid-template-columns:repeat(2,1fr)}
@@ -771,6 +787,7 @@ h1,h2,h3{margin:0; font-weight:400; letter-spacing:.02em}
   .pestanas{gap:20px; padding:12px 18px 0; overflow-x:auto; justify-content:flex-start; flex-wrap:nowrap}
   .pestana{white-space:nowrap; font-size:14px}
   .argumentos{grid-template-columns:1fr}
+  .pasos{grid-template-columns:1fr; gap:30px}
   .pie__columnas{grid-template-columns:1fr; gap:30px}
   .pie__boletin form{flex-direction:column}
   .tarjeta__agregar{opacity:1; transform:none; position:static; margin-top:10px}
