@@ -101,6 +101,30 @@ var PRODUCTOS = [
    imagenes:['ajolote-pedreria-cab.jpg','ajolote-pedreria-cab-modelo.jpg','ajolote-pedreria-cab-detalle.jpg','ajolote-pedreria-cab-2.jpg'],
    texto:'El ajolote de punteado plateado que simula pedrería, en corte de caballero. Todo el estampado es serigrafía.'},
 
+  {id:'calavera-huichol', nombre:'Calavera Huichol',     coleccion:'calaveras', secciones:['caballero'], tela:'#141414', tinta:'#31a8e0', nuevo:true, destacado:true,
+   imagenes:['calavera-huichol.jpg','calavera-huichol-modelo.jpg','calavera-huichol-modelo2.jpg','calavera-huichol-detalle.jpg'],
+   texto:'Calavera de azúcar llena de figuras de inspiración huichol: flores, aves y grecas en azul, rojo y amarillo sobre negro.'},
+
+  {id:'mascara-azul',     nombre:'Máscara Azul',          coleccion:'mascaras',  secciones:['caballero'], tela:'#141414', tinta:'#1a5fd0', nuevo:true, destacado:true,
+   imagenes:['mascara-azul.jpg','mascara-azul-modelo.jpg','mascara-azul-modelo2.jpg'],
+   texto:'La máscara azul y blanca de las que se ven en la arena. Grande, al centro del pecho y sin más adornos.'},
+
+  {id:'mascara-plata',    nombre:'Máscara de Plata',      coleccion:'mascaras',  secciones:['caballero'], tela:'#141414', tinta:'#dfe4ea', nuevo:true, destacado:true,
+   imagenes:['mascara-plata.jpg','mascara-plata-modelo.jpg','mascara-plata-modelo2.jpg','mascara-plata-detalle.jpg'],
+   texto:'La máscara del ídolo, en plata y oro sobre negro. El acercamiento deja ver el brillo del estampado.'},
+
+  {id:'quetzalcoatl',     nombre:'Quetzalcóatl',          coleccion:'tradicion', secciones:['caballero'], tela:'#141414', tinta:'#2a9d5c', nuevo:true, destacado:true,
+   imagenes:['quetzalcoatl.jpg','quetzalcoatl-modelo.jpg','quetzalcoatl-modelo2.jpg'],
+   texto:'La serpiente emplumada entre hojas, con el cuerpo lleno de punteado de colores sobre negro.'},
+
+  {id:'xolo-cab',         nombre:'Xoloitzcuintle',        coleccion:'alebrijes', secciones:['caballero'], tela:'#141414', tinta:'#31c0b8', nuevo:false, destacado:false,
+   imagenes:['xolo-cab.jpg','xolo-cab-modelo.jpg','xolo-cab-modelo2.jpg','xolo-cab-detalle.jpg'],
+   texto:'El xolo, el perro que acompaña a los muertos en su camino, en corte de caballero. Turquesa y naranja sobre una mancha gris.'},
+
+  {id:'ajolote-alebrije-cab', nombre:'Ajolote Alebrije',  coleccion:'ajolotes',  secciones:['caballero'], tela:'#141414', tinta:'#31c0b8', nuevo:false, destacado:false,
+   imagenes:['ajolote-alebrije-cab.jpg','ajolote-alebrije-cab-modelo.jpg','ajolote-alebrije-cab-detalle.jpg'],
+   texto:'El ajolote en clave alebrije, en corte de caballero. Grecas, rombos y punteado de colores sobre negro.'},
+
   /* ================= PIEZAS ILUSTRADAS =================
      Todavía sin foto: se dibujan solas. Cuando tengas la foto,
      agrégala a assets/productos/ y ponla aquí en "imagenes".      */
@@ -131,8 +155,7 @@ var PRODUCTOS = [
    texto:'Ajolote entre trajineras y flores, un homenaje a los canales que lo vieron nacer.'},
 
   /* --- MASCARAS --- */
-  {id:'mascara-plata',  nombre:'Máscara de Plata',       coleccion:'mascaras', secciones:['caballero'],         tela:'#0e0e0e', tinta:'#dfe4ea', imagen:'', nuevo:false, destacado:true,
-   texto:'Máscara de luchador con estrella en la frente, en plata mate sobre negro.'},
+
   {id:'rudo-y-tecnico', nombre:'Rudo y Técnico',         coleccion:'mascaras', secciones:['caballero','dama'],  tela:'#8a1030', tinta:'#ffd166', imagen:'', nuevo:true,  destacado:true,
    texto:'Dos máscaras frente a frente, la eterna rivalidad de la arena, en oro sobre guinda.'},
   {id:'mascara-jaguar', nombre:'Máscara Jaguar',         coleccion:'mascaras', secciones:['caballero'],         tela:'#1f3d2b', tinta:'#f5a300', imagen:'', nuevo:false, destacado:false,
