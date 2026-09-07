@@ -53,9 +53,9 @@ var PRODUCTOS = [
    imagenes:['chihuahua.jpg','chihuahua-modelo.jpg'],
    texto:'Un chihuahueño vuelto calavera de azúcar, con flores en las orejas y el esqueleto estampado en blanco.'},
 
-  {id:'calavera-pedreria',nombre:'Calavera de Pedrería', coleccion:'calaveras', secciones:['dama'], tela:'#141414', tinta:'#e6007e', nuevo:false, destacado:true,
-   imagenes:['calavera-pedreria.jpg'],
-   texto:'Calavera de azúcar resuelta en punteado rojo y azul que simula pedrería. Todo el estampado es serigrafía.'},
+  {id:'calavera-corazon', nombre:'Calavera Corazón',    coleccion:'calaveras', secciones:['dama'], tela:'#141414', tinta:'#e6007e', nuevo:false, destacado:true,
+   imagenes:['calavera-corazon.jpg'],
+   texto:'Calavera de azúcar con un corazón rojo al centro de la frente, rodeada de flores y punteado en azul, rosa y naranja.'},
 
   {id:'ajolote-negro',    nombre:'Ajolote Negro',        coleccion:'ajolotes',  secciones:['dama'], tela:'#141414', tinta:'#dfe4ea', nuevo:false, destacado:true,
    imagenes:['ajolote-negro.jpg','ajolote-negro-modelo.jpg'],
