@@ -69,7 +69,7 @@ var PRODUCTOS = [
    imagenes:['colibries.jpg'],
    texto:'Dos colibríes y un ramo de flores en estilo otomí, en rosa, verde y amarillo sobre negro.'},
 
-  {id:'xolo',             nombre:'Xoloitzcuintle',       coleccion:'alebrijes', secciones:['dama'], tela:'#141414', tinta:'#31c0b8', nuevo:false, destacado:false,
+  {id:'xolo',             nombre:'Perro Xolo'      ,       coleccion:'alebrijes', secciones:['dama'], tela:'#141414', tinta:'#31c0b8', nuevo:false, destacado:false,
    imagenes:['xolo.jpg','xolo-modelo.jpg'],
    texto:'El xolo, el perro que acompaña a los muertos en su camino, resuelto con grecas en turquesa y naranja.'},
 
@@ -119,7 +119,7 @@ var PRODUCTOS = [
    imagenes:['quetzalcoatl.jpg','quetzalcoatl-modelo.jpg','quetzalcoatl-modelo2.jpg'],
    texto:'La serpiente emplumada entre hojas, con el cuerpo lleno de punteado de colores sobre negro.'},
 
-  {id:'xolo-cab',         nombre:'Xoloitzcuintle',        coleccion:'alebrijes', secciones:['caballero'], tela:'#141414', tinta:'#31c0b8', nuevo:false, destacado:false,
+  {id:'xolo-cab',         nombre:'Perro Xolo'      ,        coleccion:'alebrijes', secciones:['caballero'], tela:'#141414', tinta:'#31c0b8', nuevo:false, destacado:false,
    imagenes:['xolo-cab.jpg','xolo-cab-modelo.jpg','xolo-cab-modelo2.jpg','xolo-cab-detalle.jpg'],
    texto:'El xolo, el perro que acompaña a los muertos en su camino, en corte de caballero. Turquesa y naranja sobre una mancha gris.'},
 
