@@ -13,7 +13,8 @@
 
 /* ============ AJUSTES DE LA MARCA ============ */
 var TIENDA   = 'Huesitos Playeras Artesanales';
-var PRECIO   = 280;
+var PRECIO   = 280;        // dama y caballero
+var PRECIO_NINO = 250;     // niño
 var WHATSAPP = '525643120421';         // numero para recibir pedidos
 var RUTA_FOTOS = 'assets/productos/';
 
@@ -145,35 +146,35 @@ var PRODUCTOS = [
 
   /* ================= NIÑO ================= */
 
-  {id:'chihuahua-nino',   nombre:'Chihuahua de Muertos', coleccion:'calaveras', secciones:['nino'], tela:'#141414', tinta:'#ffd166', nuevo:true, destacado:false,
+  {id:'chihuahua-nino',   nombre:'Chihuahua de Muertos', coleccion:'calaveras', secciones:['nino'], tela:'#141414', tinta:'#ffd166', precio:250, nuevo:true, destacado:false,
    imagenes:['chihuahua-nino.jpg','chihuahua-nino-modelo.jpg'],
    texto:'Un chihuahueño vuelto calavera de azúcar, con flores en las orejas. En tallas de 2 a 14 años.'},
 
-  {id:'calaveras-calle-nino', nombre:'Calaveras en la Calle', coleccion:'calaveras', secciones:['nino'], tela:'#141414', tinta:'#e6007e', nuevo:true, destacado:false,
+  {id:'calaveras-calle-nino', nombre:'Calaveras en la Calle', coleccion:'calaveras', secciones:['nino'], tela:'#141414', tinta:'#e6007e', precio:250, nuevo:true, destacado:false,
    imagenes:['calaveras-calle-nino.jpg','calaveras-calle-nino-detalle.jpg'],
    texto:'Cuatro calaveras enmascaradas cruzando el paso de peatones, cada una con su máscara de color. La favorita de los niños.'},
 
-  {id:'ajolote-alebrije-nino', nombre:'Ajolote Alebrije',  coleccion:'ajolotes',  secciones:['nino'], tela:'#141414', tinta:'#31c0b8', nuevo:true, destacado:false,
+  {id:'ajolote-alebrije-nino', nombre:'Ajolote Alebrije',  coleccion:'ajolotes',  secciones:['nino'], tela:'#141414', tinta:'#31c0b8', precio:250, nuevo:true, destacado:false,
    imagenes:['ajolote-alebrije-nino.jpg','ajolote-alebrije-nino-modelo.jpg'],
    texto:'El ajolote en clave alebrije: grecas, rombos y punteado de colores sobre negro, en talla de niño.'},
 
-  {id:'mascara-azul-nino', nombre:'Máscara Azul',          coleccion:'mascaras',  secciones:['nino'], tela:'#141414', tinta:'#1a5fd0', nuevo:true, destacado:false,
+  {id:'mascara-azul-nino', nombre:'Máscara Azul',          coleccion:'mascaras',  secciones:['nino'], tela:'#141414', tinta:'#1a5fd0', precio:250, nuevo:true, destacado:false,
    imagenes:['mascara-azul-nino.jpg','mascara-azul-nino-modelo.jpg'],
    texto:'La máscara azul y blanca de la arena, grande y al centro del pecho. Para el que se sube al ring de la sala.'},
 
-  {id:'mascara-plata-nino', nombre:'Máscara de Plata',     coleccion:'mascaras',  secciones:['nino'], tela:'#141414', tinta:'#dfe4ea', nuevo:true, destacado:false,
+  {id:'mascara-plata-nino', nombre:'Máscara de Plata',     coleccion:'mascaras',  secciones:['nino'], tela:'#141414', tinta:'#dfe4ea', precio:250, nuevo:true, destacado:false,
    imagenes:['mascara-plata-nino.jpg','mascara-plata-nino-modelo.jpg','mascara-plata-nino-detalle.jpg'],
    texto:'La máscara del ídolo, en plata y oro sobre negro. El acercamiento deja ver el brillo del estampado.'},
 
-  {id:'xolo-nino',        nombre:'Perro Xolo',             coleccion:'alebrijes', secciones:['nino'], tela:'#141414', tinta:'#31c0b8', nuevo:true, destacado:false,
+  {id:'xolo-nino',        nombre:'Perro Xolo',             coleccion:'alebrijes', secciones:['nino'], tela:'#141414', tinta:'#31c0b8', precio:250, nuevo:true, destacado:false,
    imagenes:['xolo-nino.jpg','xolo-nino-modelo.jpg'],
    texto:'El xolo, el perro que acompaña a los muertos en su camino, en turquesa y naranja sobre una mancha gris.'},
 
-  {id:'frida-nino',       nombre:'Frida entre Flores',     coleccion:'tradicion', secciones:['nino'], tela:'#141414', tinta:'#e6007e', nuevo:true, destacado:false,
+  {id:'frida-nino',       nombre:'Frida entre Flores',     coleccion:'tradicion', secciones:['nino'], tela:'#141414', tinta:'#e6007e', precio:250, nuevo:true, destacado:false,
    imagenes:['frida-nino.jpg','frida-nino-modelo.jpg'],
    texto:'Frida con su corona de flores y el vestido armado de flores, en colores encendidos sobre negro.'},
 
-  {id:'muneca-lele-nino', nombre:'Muñeca Lele',            coleccion:'tradicion', secciones:['nino'], tela:'#141414', tinta:'#e6007e', nuevo:true, destacado:false,
+  {id:'muneca-lele-nino', nombre:'Muñeca Lele',            coleccion:'tradicion', secciones:['nino'], tela:'#141414', tinta:'#e6007e', precio:250, nuevo:true, destacado:false,
    imagenes:['muneca-lele-nino.jpg','muneca-lele-nino-modelo.jpg'],
    texto:'La muñeca otomí de trenzas y listones, rodeada de rosas. México lindo, y lo dice ahí mismo.'}
 ];
@@ -197,6 +198,12 @@ function sinAcentos(t){
 function porId(id){
   for(var i=0;i<PRODUCTOS.length;i++){ if(PRODUCTOS[i].id===id) return PRODUCTOS[i]; }
   return null;
+}
+
+/* Cada pieza puede traer su propio precio; si no, va el de la sección. */
+function precioDe(p){
+  if(p.precio) return p.precio;
+  return p.secciones[0] === 'nino' ? PRECIO_NINO : PRECIO;
 }
 
 function tallasDe(p){
@@ -318,7 +325,7 @@ function tarjeta(p){
       '<button class="tarjeta__agregar" type="button" data-agregar="'+p.id+'">Agregar al carrito</button>'+
     '</div>'+
     '<h3 class="tarjeta__nombre"><a href="producto.html?id='+p.id+'">'+escapar(p.nombre)+'</a></h3>'+
-    '<p class="tarjeta__precio">'+dinero(PRECIO)+'</p>'+
+    '<p class="tarjeta__precio">'+dinero(precioDe(p))+'</p>'+
     '<p class="tarjeta__coleccion">'+NOMBRE_COLECCION[p.coleccion]+'</p>'+
   '</article>';
 }
@@ -439,8 +446,12 @@ function iniciarFicha(){
         '<a href="'+p.secciones[0]+'.html">'+NOMBRE_SECCION[p.secciones[0]]+'</a> / '+
         escapar(p.nombre)+'</p>'+
       '<h1>'+escapar(p.nombre)+'</h1>'+
-      '<p class="ficha__precio">'+dinero(PRECIO)+'</p>'+
-      '<p class="ficha__impuestos">Precio único en toda la tienda · IVA incluido</p>'+
+      '<p class="ficha__precio">'+dinero(precioDe(p))+'</p>'+
+      '<p class="ficha__impuestos">'+
+        (p.secciones[0] === 'nino'
+          ? 'Precio único en toda la colección de niño · IVA incluido'
+          : 'Precio único en dama y caballero · IVA incluido')+
+      '</p>'+
       '<p class="ficha__descripcion">'+escapar(p.texto)+'</p>'+
 
       '<div class="campo">'+
@@ -552,7 +563,10 @@ var Carrito = (function(){
     return lineas.reduce(function(s,l){ return s + l.cantidad; }, 0);
   }
   function suma(){
-    return piezas() * PRECIO;
+    return lineas.reduce(function(s,l){
+      var p = porId(l.id);
+      return s + (p ? precioDe(p) * l.cantidad : 0);
+    }, 0);
   }
 
   function textoPedido(){
@@ -560,7 +574,7 @@ var Carrito = (function(){
     var t = '¡Hola '+TIENDA+'! Quiero pedir:\n';
     lineas.forEach(function(l){
       var p = porId(l.id);
-      if(p) t += '• '+p.nombre+' — talla '+l.talla+' × '+l.cantidad+' = '+dinero(l.cantidad*PRECIO)+'\n';
+      if(p) t += '• '+p.nombre+' — talla '+l.talla+' × '+l.cantidad+' = '+dinero(l.cantidad*precioDe(p))+'\n';
     });
     t += '\nTotal: '+dinero(suma())+'\n¿Me confirman disponibilidad y envío?';
     return t;
@@ -576,7 +590,7 @@ var Carrito = (function(){
     if(!lista) return;
     if(!lineas.length){
       lista.innerHTML = '<p class="carrito__vacio">Tu carrito está vacío.<br>'+
-                        'Todas nuestras piezas cuestan '+dinero(PRECIO)+'.</p>';
+                        'Dama y caballero '+dinero(PRECIO)+', niño '+dinero(PRECIO_NINO)+'.</p>';
       return;
     }
     lista.innerHTML = lineas.map(function(l, i){
@@ -589,7 +603,7 @@ var Carrito = (function(){
         '<div class="linea__lienzo">'+lienzoDe(p)+'</div>'+
         '<div class="linea__cuerpo">'+
           '<p class="linea__nombre">'+escapar(p.nombre)+'</p>'+
-          '<p class="linea__precio">'+l.cantidad+' × '+dinero(PRECIO)+' = '+dinero(l.cantidad*PRECIO)+'</p>'+
+          '<p class="linea__precio">'+l.cantidad+' × '+dinero(precioDe(p))+' = '+dinero(l.cantidad*precioDe(p))+'</p>'+
           '<div class="linea__controles">'+
             '<select data-talla-de="'+i+'" aria-label="Talla">'+opciones+'</select>'+
             '<div class="cantidad">'+
@@ -714,7 +728,7 @@ function iniciarBuscador(){
     salida.innerHTML = hallados.map(function(p){
       return '<a class="resultado" href="producto.html?id='+p.id+'">'+
         '<span class="resultado__miniatura">'+lienzoDe(p)+'</span>'+
-        '<span><b>'+escapar(p.nombre)+'</b><span>'+NOMBRE_COLECCION[p.coleccion]+' · '+dinero(PRECIO)+'</span></span>'+
+        '<span><b>'+escapar(p.nombre)+'</b><span>'+NOMBRE_COLECCION[p.coleccion]+' · '+dinero(precioDe(p))+'</span></span>'+
       '</a>';
     }).join('');
   });
