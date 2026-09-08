@@ -141,7 +141,41 @@ var PRODUCTOS = [
 
   {id:'ajolote-alebrije-cab', nombre:'Ajolote Alebrije',  coleccion:'ajolotes',  secciones:['caballero'], tela:'#141414', tinta:'#31c0b8', nuevo:false, destacado:false,
    imagenes:['ajolote-alebrije-cab.jpg','ajolote-alebrije-cab-modelo.jpg','ajolote-alebrije-cab-detalle.jpg'],
-   texto:'El ajolote en clave alebrije, en corte de caballero. Grecas, rombos y punteado de colores sobre negro.'}
+   texto:'El ajolote en clave alebrije, en corte de caballero. Grecas, rombos y punteado de colores sobre negro.'},
+
+  /* ================= NIÑO ================= */
+
+  {id:'chihuahua-nino',   nombre:'Chihuahua de Muertos', coleccion:'calaveras', secciones:['nino'], tela:'#141414', tinta:'#ffd166', nuevo:true, destacado:false,
+   imagenes:['chihuahua-nino.jpg','chihuahua-nino-modelo.jpg'],
+   texto:'Un chihuahueño vuelto calavera de azúcar, con flores en las orejas. En tallas de 2 a 14 años.'},
+
+  {id:'calaveras-calle-nino', nombre:'Calaveras en la Calle', coleccion:'calaveras', secciones:['nino'], tela:'#141414', tinta:'#e6007e', nuevo:true, destacado:false,
+   imagenes:['calaveras-calle-nino.jpg','calaveras-calle-nino-detalle.jpg'],
+   texto:'Cuatro calaveras enmascaradas cruzando el paso de peatones, cada una con su máscara de color. La favorita de los niños.'},
+
+  {id:'ajolote-alebrije-nino', nombre:'Ajolote Alebrije',  coleccion:'ajolotes',  secciones:['nino'], tela:'#141414', tinta:'#31c0b8', nuevo:true, destacado:false,
+   imagenes:['ajolote-alebrije-nino.jpg','ajolote-alebrije-nino-modelo.jpg'],
+   texto:'El ajolote en clave alebrije: grecas, rombos y punteado de colores sobre negro, en talla de niño.'},
+
+  {id:'mascara-azul-nino', nombre:'Máscara Azul',          coleccion:'mascaras',  secciones:['nino'], tela:'#141414', tinta:'#1a5fd0', nuevo:true, destacado:false,
+   imagenes:['mascara-azul-nino.jpg','mascara-azul-nino-modelo.jpg'],
+   texto:'La máscara azul y blanca de la arena, grande y al centro del pecho. Para el que se sube al ring de la sala.'},
+
+  {id:'mascara-plata-nino', nombre:'Máscara de Plata',     coleccion:'mascaras',  secciones:['nino'], tela:'#141414', tinta:'#dfe4ea', nuevo:true, destacado:false,
+   imagenes:['mascara-plata-nino.jpg','mascara-plata-nino-modelo.jpg','mascara-plata-nino-detalle.jpg'],
+   texto:'La máscara del ídolo, en plata y oro sobre negro. El acercamiento deja ver el brillo del estampado.'},
+
+  {id:'xolo-nino',        nombre:'Perro Xolo',             coleccion:'alebrijes', secciones:['nino'], tela:'#141414', tinta:'#31c0b8', nuevo:true, destacado:false,
+   imagenes:['xolo-nino.jpg','xolo-nino-modelo.jpg'],
+   texto:'El xolo, el perro que acompaña a los muertos en su camino, en turquesa y naranja sobre una mancha gris.'},
+
+  {id:'frida-nino',       nombre:'Frida entre Flores',     coleccion:'tradicion', secciones:['nino'], tela:'#141414', tinta:'#e6007e', nuevo:true, destacado:false,
+   imagenes:['frida-nino.jpg','frida-nino-modelo.jpg'],
+   texto:'Frida con su corona de flores y el vestido armado de flores, en colores encendidos sobre negro.'},
+
+  {id:'muneca-lele-nino', nombre:'Muñeca Lele',            coleccion:'tradicion', secciones:['nino'], tela:'#141414', tinta:'#e6007e', nuevo:true, destacado:false,
+   imagenes:['muneca-lele-nino.jpg','muneca-lele-nino-modelo.jpg'],
+   texto:'La muñeca otomí de trenzas y listones, rodeada de rosas. México lindo, y lo dice ahí mismo.'}
 ];
 
 /* ============ HERRAMIENTAS ============ */
