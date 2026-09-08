@@ -363,20 +363,28 @@ h1,h2,h3{margin:0; font-weight:400; letter-spacing:.02em}
 }
 .mosaico__pieza{
   position:relative; overflow:hidden; border-radius:3px;
-  min-height:340px;
+  min-height:400px;
   display:flex; align-items:flex-end;
   color:#fff;
   transition:transform .3s;
 }
 .mosaico__pieza:hover{transform:translateY(-4px)}
+/* la foto va hasta el fondo; el degradado encima para que el nombre se lea */
+.mosaico__pieza img{
+  position:absolute; inset:0; z-index:0;
+  width:100%; height:100%; object-fit:cover;
+  transition:transform .5s;
+}
+.mosaico__pieza:hover img{transform:scale(1.04)}
 .mosaico__pieza::after{
-  content:""; position:absolute; inset:0;
-  background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.6));
+  content:""; position:absolute; inset:0; z-index:1;
+  background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.72));
 }
 .mosaico__pieza span{
-  position:relative; z-index:1;
+  position:relative; z-index:2;
   padding:24px;
   font-family:var(--titulo); font-size:22px; letter-spacing:.04em;
+  text-shadow:0 2px 14px rgba(0,0,0,.5);
 }
 .mosaico__pieza--calaveras{background:linear-gradient(150deg,#3b2a4d,#8e4d9e)}
 .mosaico__pieza--ajolotes{background:linear-gradient(150deg,#0a5a6b,#31c0b8)}
