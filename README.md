@@ -43,16 +43,29 @@ Todo el catálogo vive en el arreglo `PRODUCTOS` al inicio de `script.js`:
   usa el dibujo ilustrado.
 - `nuevo` — pone la etiqueta rosa. `destacado` — sale en la portada.
 
-## Cosas que conviene cambiar antes de publicar
+## Publicado en GitHub Pages
 
-1. **Dominio.** Cada página trae `huesitos.mx` de ejemplo en las etiquetas
-   `canonical`, `og:url` y `og:image`. Reemplázalo por tu dominio real o
-   WhatsApp y Facebook no mostrarán la vista previa al compartir el enlace.
-2. **Imagen para compartir.** Sube `assets/og.jpg` de 1200 × 630 px.
-3. **WhatsApp.** El número de pedidos está en `script.js`, en la constante
-   `WHATSAPP`.
-4. **Precio.** La constante `PRECIO` en `script.js` (hoy $280 para toda la tienda).
-5. **Fotos.** Ver `assets/productos/LEEME.txt`.
+El sitio vive en:
+
+    https://eleonardonaranjo-afk.github.io/playeras-huesiitos/
+
+Se publica solo: cada vez que algo llega a la rama `main`, GitHub vuelve a
+subir el sitio en uno o dos minutos.
+
+Para activarlo la primera vez: en el repositorio, **Settings → Pages**,
+en *Source* elegir **Deploy from a branch**, rama `main` y carpeta `/ (root)`.
+
+## Dónde se cambia cada cosa
+
+- **WhatsApp de pedidos:** la constante `WHATSAPP` en `script.js`.
+- **Precios:** las constantes `PRECIO` (dama y caballero, $280) y
+  `PRECIO_NINO` ($250) en `script.js`. Una playera puede traer su propio
+  precio con el campo `precio`.
+- **Fotos de producto:** ver `assets/productos/LEEME.txt`.
+- **Imagen que sale al compartir el enlace:** `assets/og.jpg`, de 1200 × 630 px.
+- **Dirección del sitio:** si algún día se usa un dominio propio, hay que
+  cambiarla en las etiquetas `canonical`, `og:url` y `og:image` de las seis
+  páginas, y agregar un archivo `CNAME` con el dominio.
 
 ## Cómo funciona el carrito
 
