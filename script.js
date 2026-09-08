@@ -41,7 +41,7 @@ var PRODUCTOS = [
    imagenes:['ajolote-alebrije.jpg','ajolote-alebrije-modelo.jpg','ajolote-alebrije-modelo2.jpg','ajolote-alebrije-modelo3.jpg'],
    texto:'Un ajolote en clave alebrije: grecas, rombos y puntos de colores sobre negro, con las branquias abiertas como plumas.'},
 
-  {id:'catrina-sombrero', nombre:'Catrina de Sombrero',  coleccion:'calaveras', secciones:['dama'], tela:'#141414', tinta:'#f3e7d6', nuevo:true,  destacado:true,
+  {id:'catrina-sombrero', nombre:'Catrina de Sombrero',  coleccion:'calaveras', secciones:['dama'], tela:'#141414', tinta:'#f3e7d6', nuevo:true,  destacado:false,
    imagenes:['catrina-sombrero-producto.jpg','catrina-sombrero.jpg','catrina-sombrero-modelo2.jpg','catrina-sombrero-detalle.jpg'],
    texto:'La Catrina con su sombrero de flores y el vestido de encaje. Es la que más colores lleva de toda la colección.'},
 
