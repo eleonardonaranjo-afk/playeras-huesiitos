@@ -547,7 +547,11 @@ h1,h2,h3{margin:0; font-weight:400; letter-spacing:.02em}
   display:grid; grid-template-columns:1.1fr .9fr; gap:60px;
 }
 
-.ficha__galeria{display:grid; grid-template-columns:1fr; gap:14px}
+/* la primera foto va grande; las demás en dos columnas, para que la
+   ficha no se vuelva una tira larguísima cuando hay cuatro o cinco */
+.ficha__galeria{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+.ficha__imagen:first-child{grid-column:1 / -1; aspect-ratio:4/5}
+.ficha__galeria .ficha__imagen{aspect-ratio:3/4}
 .ficha__imagen{
   display:flex; align-items:center; justify-content:center;
   aspect-ratio:4/5; background:var(--hueso); border-radius:3px; overflow:hidden;

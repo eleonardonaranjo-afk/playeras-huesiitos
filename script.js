@@ -38,35 +38,35 @@ var PRODUCTOS = [
      salen también en la ficha del producto.                              */
 
   {id:'ajolote-alebrije', nombre:'Ajolote Alebrije',     coleccion:'ajolotes',  secciones:['dama'], tela:'#141414', tinta:'#31c0b8', nuevo:true,  destacado:true,
-   imagenes:['ajolote-alebrije.jpg','ajolote-alebrije-modelo.jpg'],
+   imagenes:['ajolote-alebrije.jpg','ajolote-alebrije-modelo.jpg','ajolote-alebrije-modelo2.jpg','ajolote-alebrije-modelo3.jpg'],
    texto:'Un ajolote en clave alebrije: grecas, rombos y puntos de colores sobre negro, con las branquias abiertas como plumas.'},
 
   {id:'catrina-sombrero', nombre:'Catrina de Sombrero',  coleccion:'calaveras', secciones:['dama'], tela:'#141414', tinta:'#f3e7d6', nuevo:true,  destacado:true,
-   imagenes:['catrina-sombrero.jpg'],
+   imagenes:['catrina-sombrero-producto.jpg','catrina-sombrero.jpg','catrina-sombrero-modelo2.jpg','catrina-sombrero-detalle.jpg'],
    texto:'La Catrina con su sombrero de flores y el vestido de encaje. Es la que más colores lleva de toda la colección.'},
 
   {id:'frida',            nombre:'Frida entre Flores',   coleccion:'tradicion', secciones:['dama'], tela:'#141414', tinta:'#e6007e', nuevo:true,  destacado:true,
-   imagenes:['frida.jpg','frida-modelo.jpg'],
+   imagenes:['frida.jpg','frida-modelo.jpg','frida-modelo2.jpg','frida-modelo3.jpg','frida-detalle.jpg'],
    texto:'Frida con su corona de flores y el vestido armado de flores, en colores encendidos sobre negro.'},
 
   {id:'chihuahua',        nombre:'Chihuahua de Muertos', coleccion:'calaveras', secciones:['dama'], tela:'#141414', tinta:'#ffd166', nuevo:false, destacado:true,
-   imagenes:['chihuahua.jpg','chihuahua-modelo.jpg'],
+   imagenes:['chihuahua.jpg','chihuahua-modelo.jpg','chihuahua-modelo2.jpg','chihuahua-modelo3.jpg'],
    texto:'Un chihuahueño vuelto calavera de azúcar, con flores en las orejas y el esqueleto estampado en blanco.'},
 
   {id:'calavera-corazon', nombre:'Calavera Corazón',    coleccion:'calaveras', secciones:['dama'], tela:'#141414', tinta:'#e6007e', nuevo:false, destacado:true,
-   imagenes:['calavera-corazon.jpg'],
+   imagenes:['calavera-corazon-producto.jpg','calavera-corazon.jpg','calavera-corazon-modelo2.jpg','calavera-corazon-detalle.jpg'],
    texto:'Calavera de azúcar con un corazón rojo al centro de la frente, rodeada de flores y punteado en azul, rosa y naranja.'},
 
   {id:'ajolote-negro',    nombre:'Ajolote Negro',        coleccion:'ajolotes',  secciones:['dama'], tela:'#141414', tinta:'#dfe4ea', nuevo:false, destacado:true,
-   imagenes:['ajolote-negro.jpg','ajolote-negro-modelo.jpg'],
+   imagenes:['ajolote-negro.jpg','ajolote-negro-modelo.jpg','ajolote-negro-modelo2.jpg','ajolote-negro-detalle.jpg'],
    texto:'Ajolote en punteado plateado sobre negro. De lejos parece piedra; de cerca es serigrafía.'},
 
   {id:'muneca-lele',      nombre:'Muñeca Lele',          coleccion:'tradicion', secciones:['dama'], tela:'#141414', tinta:'#e6007e', nuevo:true,  destacado:false,
-   imagenes:['muneca-lele.jpg','muneca-lele-modelo.jpg'],
+   imagenes:['muneca-lele-producto.jpg','muneca-lele.jpg','muneca-lele-modelo.jpg','muneca-lele-modelo3.jpg'],
    texto:'La muñeca otomí de trenzas y listones, rodeada de rosas. México lindo, y lo dice ahí mismo.'},
 
   {id:'colibries',        nombre:'Colibríes Otomí',      coleccion:'tradicion', secciones:['dama'], tela:'#141414', tinta:'#31c0b8', nuevo:true,  destacado:false,
-   imagenes:['colibries.jpg'],
+   imagenes:['colibries-producto.jpg','colibries.jpg','colibries-modelo2.jpg','colibries-detalle.jpg'],
    texto:'Dos colibríes y un ramo de flores en estilo otomí, en rosa, verde y amarillo sobre negro.'},
 
   {id:'xolo',             nombre:'Perro Xolo'      ,       coleccion:'alebrijes', secciones:['dama'], tela:'#141414', tinta:'#31c0b8', nuevo:false, destacado:false,
@@ -76,6 +76,22 @@ var PRODUCTOS = [
   {id:'calavera-florida', nombre:'Calavera Florida',     coleccion:'calaveras', secciones:['dama'], tela:'#141414', tinta:'#7fb2ff', nuevo:false, destacado:false,
    imagenes:['calavera-florida.jpg'],
    texto:'Calavera cubierta de flores azules y rojas, con un pájaro posado en la frente.'},
+
+  {id:'calavera-huichol-dama', nombre:'Calavera Huichol', coleccion:'calaveras', secciones:['dama'], tela:'#141414', tinta:'#31a8e0', nuevo:true, destacado:true,
+   imagenes:['calavera-huichol-dama.jpg','calavera-huichol-dama-modelo.jpg','calavera-huichol-dama-modelo2.jpg','calavera-huichol-dama-detalle.jpg'],
+   texto:'Calavera de azúcar llena de figuras de inspiración huichol: flores, aves y grecas en azul, rojo y amarillo sobre negro.'},
+
+  {id:'calavera-grecas-dama', nombre:'Calavera de Grecas',  coleccion:'calaveras', secciones:['dama'], tela:'#141414', tinta:'#dfe4ea', nuevo:true, destacado:true,
+   imagenes:['calavera-grecas-dama.jpg','calavera-grecas-dama-modelo.jpg','calavera-grecas-dama-modelo2.jpg'],
+   texto:'Calavera armada entera con grecas y rombos en blanco. De lejos es una calavera; de cerca es puro dibujo geométrico.'},
+
+  {id:'catrina-flores',  nombre:'Catrina Flores',           coleccion:'calaveras', secciones:['dama'], tela:'#141414', tinta:'#e6007e', nuevo:true, destacado:true,
+   imagenes:['catrina-flores.jpg','catrina-flores-modelo.jpg'],
+   texto:'Catrina de sombrero con flores y plumas, con el vestido rosa lleno de calaveritas y mariposas monarca.'},
+
+  {id:'retrato-catrina', nombre:'Retrato de Catrina',       coleccion:'calaveras', secciones:['dama'], tela:'#141414', tinta:'#e6007e', nuevo:true, destacado:false,
+   imagenes:['retrato-catrina.jpg','retrato-catrina-modelo.jpg','retrato-catrina-modelo2.jpg'],
+   texto:'La Catrina asomada por un marco rojo, como retrato colgado en la pared. Abajo lleva escrito México Lindo.'},
 
   /* ================= CABALLERO ================= */
 
